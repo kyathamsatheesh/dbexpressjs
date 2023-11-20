@@ -23,7 +23,7 @@ connection.connect();
 const multer = require('multer');
 const upload = multer({dest: './upload'})
 
-app.get('/',(req, res) => res.send('Hello World....!!'))
+app.get('/',(req, res) => res.send('Hello World....!!'));
 
 app.get('/api/customers', (req, res) => {
     console.log("&********");
@@ -67,4 +67,4 @@ app.delete('/api/customers/:id', (req,res) => {
         })
 
 })
-app.listen(5000, () => console.log(`Listening on port ${port}`));
+app.listen(port, () => console.log(`Listening on port ${port}`));
