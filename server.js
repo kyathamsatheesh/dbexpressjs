@@ -23,6 +23,8 @@ connection.connect();
 const multer = require('multer');
 const upload = multer({dest: './upload'})
 
+app.get('/',(req, res) => res.send('Hello World....!!'))
+
 app.get('/api/customers', (req, res) => {
     console.log("&********");
     connection.query(
